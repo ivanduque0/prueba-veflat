@@ -49,7 +49,7 @@ class ProductCart extends StatelessWidget {
                     if (loadingProgress == null) return child;
                     return Center(
                       child: SizedBox(
-                        width: 190.0,
+                        width: 170.0,
                         height: 250,
                         child: Shimmer.fromColors(
                           baseColor: Color.fromARGB(255, 206, 206, 206),

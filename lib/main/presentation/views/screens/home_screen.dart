@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
-import 'package:prueba_veflat/main/domain/entities/cart_item.dart';
 import 'package:prueba_veflat/main/domain/entities/character.dart';
 import 'package:prueba_veflat/main/presentation/routes/main_navigation.dart';
 import 'package:prueba_veflat/ui/widgets/button.dart';
@@ -11,7 +9,7 @@ import 'package:shimmer/shimmer.dart';
 import '../../../../../ui/theme.dart';
 import '../../../../ui/widgets/home_app_bar.dart';
 import '../../getx/main_controller.dart';
-
+import 'package:prueba_veflat/utils/miscellaneous.dart';
 class HomeScreen extends GetWidget<MainController> {
   HomeScreen({super.key});
 
@@ -128,7 +126,7 @@ class HomeScreen extends GetWidget<MainController> {
       itemBuilder:(context, index) {
         return Center(
           child: Obx(()=> Button(
-              label: Constants.genders[index], 
+              label: Constants.genders[index].capitalizeFirstLetter(), 
               textColor: controller.genderIndex.value==index?white:black,
               borderColor: controller.genderIndex.value==index?black:grey,
               color: controller.genderIndex.value==index?black:null,
