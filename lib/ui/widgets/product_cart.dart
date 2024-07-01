@@ -68,7 +68,7 @@ class ProductCart extends StatelessWidget {
                 ),
               ),
           ),
-          SizedBox(width: 20,),
+          SizedBox(width: 15,),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -127,13 +127,13 @@ class ProductCart extends StatelessWidget {
 
   counterItems(){
     return Container(
-      width: 110,
+      width: 100,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           ButtonCounter(
             icon: Icon(Icons.remove), 
-            height: 35,
+            height: 30,
             borderColor: black,
             textColor: black,
             onTap: (){
@@ -142,7 +142,7 @@ class ProductCart extends StatelessWidget {
           Text(cartItem.quantity.toString(), style: itemQuantityCartStyle,),
           ButtonCounter(
             icon: Icon(Icons.add), 
-            height:35,
+            height:30,
             borderColor: black,
             textColor: black,
             onTap: (){

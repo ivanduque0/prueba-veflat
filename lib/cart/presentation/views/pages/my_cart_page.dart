@@ -63,12 +63,12 @@ class MyCartPage extends GetWidget<CartController> {
   calculation(){
     return Expanded(
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
+        padding: const EdgeInsets.only(left: 20, right:20, top:10),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              SizedBox(height: 20,),
+            SizedBox(height: 10,),
             InputField(
               hint: "Apply Promo Code",
               sufixIcon: Icon(Icons.arrow_forward_ios_rounded, color: lightGrey, size: 27),
@@ -123,6 +123,8 @@ class MyCartPage extends GetWidget<CartController> {
                   Obx(()=> Text("€"+(mainController.subTotal.value+10).toString(), style: rightTextCalculationStyle))
                 ],
               ),
+              SizedBox(height: 30,),
+
             ],
           ),
         ),

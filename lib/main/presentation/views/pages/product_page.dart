@@ -234,7 +234,7 @@ class ProductPage extends GetWidget<MainController> {
         scrollDirection: Axis.horizontal,
       itemCount: Constants.colors.length,
       separatorBuilder: (context, index) => SizedBox(
-        width: 10,
+        width: 0,
       ),
       itemBuilder:(context, index) {
         return Center(

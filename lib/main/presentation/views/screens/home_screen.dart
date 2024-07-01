@@ -21,20 +21,23 @@ class HomeScreen extends GetWidget<MainController> {
       appBar: HomeAppBar(),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 15),
-              child: Text(
-                "Find your clothes",
-              style: titleTextStyle,
-              textAlign: TextAlign.start,),
-            ),
-            advertisement(context),
-            genders(),
-            productList()
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 15),
+                child: Text(
+                  "Find your clothes",
+                style: titleTextStyle,
+                textAlign: TextAlign.start,),
+              ),
+              advertisement(context),
+              genders(),
+              productList(),
+              SizedBox(height: 30,)
+            ],
+          ),
         )
       ),
     );

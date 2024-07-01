@@ -20,7 +20,8 @@ class NormalAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) => AppBar(
-        title: Text(title, style: titleAppBarTextStyle,),
+        centerTitle: true,
+        title: Text(title, style: titleAppBarTextStyle, textAlign: TextAlign.center,),
         elevation: 0,
         leading: GestureDetector(
           child: Icon(Icons.arrow_back_rounded, size: 30, color: black,),
